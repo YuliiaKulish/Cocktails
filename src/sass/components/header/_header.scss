@@ -1,0 +1,369 @@
+.header__page {
+  display: flex;
+  align-items: center;
+}
+
+.header__link {
+  padding: 20px 0;
+  @media screen and (min-width: $min768) and (max-width: $max1280) {
+    z-index: 3;
+  }
+
+  @media screen and (min-width: $min1280) {
+    margin-right: 43px;
+  }
+}
+// theme
+
+.theme__btn {
+  padding: 12px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.theme {
+  display: flex;
+  align-items: center;
+
+  // @media screen and (min-width: $min768) {
+
+  // }
+}
+
+.theme__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  @media screen and (min-width: $min768) {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}
+
+.theme__text--light {
+  color: $button-orange-bgc;
+}
+
+.checkbox {
+  margin-left: 12px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.checkbox__div {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border: 1px solid $button-orange-bgc;
+  border-radius: 40px;
+  background-color: $white-color;
+  transition: 300ms;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 16px;
+    height: 16px;
+    background-color: $button-orange-bgc;
+    border-radius: 50%;
+    transition: 300ms;
+  }
+}
+
+.checkbox__input {
+  display: none;
+
+  &:checked ~ .checkbox__div {
+    background-color: $button-orange-bgc;
+    border: 1px solid $white-color;
+
+    &::before {
+      background-color: $white-color;
+      left: 21px;
+    }
+  }
+}
+
+// form
+
+.header__form {
+  display: flex;
+
+  max-width: 288px;
+
+  padding: 8px;
+  border: 1px solid $button-orange-bgc;
+  border-radius: 4px;
+  margin-top: 37px;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: $min768) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: $min768) and (max-width: $max1280) {
+    margin-left: 190px;
+  }
+}
+
+.header__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-right: 8px;
+  border-right: 1px solid $button-orange-bgc;
+  margin-right: 8px;
+}
+
+.header__input {
+  width: 100%;
+
+  border: 0;
+}
+
+// Navigation
+
+.header__nav {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $min768) and (max-width: $max1280) {
+    margin-top: 90px;
+    text-align: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: $max1280) {
+    display: none;
+  }
+
+  @media screen and (min-width: $min1280) {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.nav__link {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 0.86;
+  letter-spacing: 0.02em;
+  color: $main-color;
+
+  &:hover,
+  &:focus {
+    color: $button-orange-bgc;
+    cursor: pointer;
+
+    & .header__button--more {
+      fill: $button-orange-bgc;
+    }
+  }
+
+  @media screen and (min-width: $min768) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @media screen and (min-width: $min1280) {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}
+
+.header__button {
+  width: 150px;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: $min768) and (max-width: $max1280) {
+    margin-left: 60px;
+    margin-bottom: 0;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: $max1280) {
+    display: flex;
+  }
+
+  @media screen and (min-width: $min1280) {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 60px;
+    margin-right: 0;
+  }
+}
+
+.header__button--more {
+  margin-left: 8px;
+
+  @media screen and (min-width: $min1280) {
+    display: none;
+  }
+}
+
+.header__list {
+  display: none;
+  flex-direction: column;
+
+  width: 214px;
+  border: 1px solid $button-orange-bgc;
+  border-radius: 4px;
+
+  background-color: $white-color;
+
+  @media screen and (min-width: $min768) {
+    position: absolute;
+    top: 100%;
+    left: 44%;
+  }
+
+  @media screen and (min-width: $min1280) {
+    top: 70%;
+    left: 57%;
+  }
+}
+
+.header__favorite--link {
+  display: flex;
+  padding: 12px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+
+  color: $main-color;
+
+  &:focus,
+  &:hover {
+    background-color: $button-orange-bgc;
+    color: $white-color;
+  }
+}
+
+// Mobile menu
+
+.menu__btn {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+
+  z-index: 3;
+
+  cursor: pointer;
+
+  @media screen and (min-width: $min1280) {
+    display: none;
+  }
+}
+
+.icon__menu--close {
+  display: none;
+}
+
+.js-menu-container {
+  &.is-open ~ .menu__btn {
+    & .icon__menu--close {
+      display: block;
+    }
+
+    & .icon__menu--open {
+      display: none;
+    }
+  }
+
+  & .icon__menu--close {
+    display: block;
+  }
+}
+
+.mobile-menu__container {
+  display: flex;
+  z-index: 2;
+
+  @media screen and (max-width: $max768) {
+    display: none;
+    position: absolute;
+
+    padding: 33px 20px;
+  }
+
+  @media screen and (min-width: $min768) and (max-width: $max1280) {
+    & .theme {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $min1280) {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  &.is-open {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $max1280) {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+
+      background-color: $white-color;
+    }
+
+    @media screen and (min-width: $min768) and (max-width: $max1280) {
+      padding: 24px 16px;
+
+      &::after {
+        content: '';
+        margin-top: auto;
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: -24px;
+
+        height: 110px;
+        background-color: $button-orange-bgc;
+      }
+
+      & .theme {
+        display: flex;
+        position: absolute;
+        top: 40px;
+        left: 35%;
+      }
+    }
+
+    & .header__form {
+      @media screen and (min-width: $min768) {
+        display: none;
+      }
+    }
+
+    & .header__nav {
+      @media screen and (max-width: $max1280) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

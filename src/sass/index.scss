@@ -1,0 +1,11 @@
+@import './utils/variables';
+@import './utils/common';
+@import './theme/dark-theme';
+
+@import './components/header/header';
+@import './components/favorite/favorite';
+@import './components/main/hero';
+@import './components/main/cocktails';
+@import './components/main/modal/modal';
+@import './components/footer/footer';
+@import './utils/overlay';

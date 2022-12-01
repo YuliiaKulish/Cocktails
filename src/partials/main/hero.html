@@ -1,0 +1,97 @@
+<section class="section hero">
+  <div class="container hero__container">
+    <div class="hero__box">
+      <h1 class="hero__title">A party without cocktails is not like a party</h1>
+      <picture>
+        <source
+          srcset="
+            ./image/hero-cocktail-mobile@1x.png 1x,
+            ./image/hero-cocktail-mobile@2x.png 2x,
+            ./image/hero-cocktail-mobile@3x.png 3x
+          "
+          media="(max-width:767px)"
+          type="image/png"
+        />
+        <source
+          srcset="
+            ./image/hero-cocktail-tablet@1x.png 1x,
+            ./image/hero-cocktail-tablet@2x.png 2x,
+            ./image/hero-cocktail-tablet@3x.png 3x
+          "
+          media="(min-width:768px) and (max-width:1279px)"
+          type="image/png"
+        />
+        <source
+          srcset="
+            ./image/hero-cocktail-desktop@1x.png 1x,
+            ./image/hero-cocktail-desktop@2x.png 2x,
+            ./image/hero-cocktail-desktop@3x.png 3x
+          "
+          media="(min-width:1280px)"
+          type="image/png"
+        />
+        <img
+          class="hero__img--cocktail"
+          src="./image/hero-cocktail-mobile@1x.png"
+          alt="cocktail"
+        />
+      </picture>
+      <!-- ============= костиль для js img ========-->
+      <picture class="js_hidden_picture">
+        <source
+          srcset="
+            ./image/sorry-mobile@1x.png 1x,
+            ./image/sorry-mobile@2x.png 2x,
+            ./image/sorry-mobile@3x.png 3x
+          "
+          media="(max-width:767px)"
+          type="image/png"
+        />
+        <source
+          srcset="
+            ./image/sorry-tablet@1x.png 1x,
+            ./image/sorry-tablet@2x.png 2x,
+            ./image/sorry-tablet@3x.png 3x
+          "
+          media="(min-width:768px) and (max-width:1279px)"
+          type="image/png"
+        />
+        <source
+          srcset="
+            ./image/sorry-desktop@1x.png 1x,
+            ./image/sorry-desktop@2x.png 2x,
+            ./image/sorry-desktop@3x.png 3x
+          "
+          media="(min-width:1280px)"
+          type="image/png"
+        />
+        <img
+          class="hero__image"
+          src="./image/sorry-mobile@1x.png"
+          alt="cocktail"
+        />
+      </picture>
+      <!-- ============================= -->
+    </div>
+
+    <p class="hero__text">Search your favorite cocktail by ABC</p>
+    <ul class="list hero__list"></ul>
+
+    <div class="datalist__box">
+      <input
+        class="hero__input"
+        list=""
+        role="combobox"
+        type="text"
+        value="A"
+        id="input"
+        name="cocktails__abc"
+      />
+      <svg class="datalist__icon">
+        <use href="./image/sprite.svg#icon-chevron-down"></use>
+      </svg>
+      <datalist class="hero__datalist" role="listbox" id="cocktails__abc">
+      </datalist>
+    </div>
+  </div>
+</section>

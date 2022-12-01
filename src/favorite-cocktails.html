@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite cocktails</title>
+    <link rel="stylesheet" href="./sass/index.scss" />
+  </head>
+  <body data-unscroll>
+    <include src="./partials/header/header.html"></include>
+
+      <include src="./partials/favorite/list-cocktails.html"></include>
+
+    <include src="./partials/footer/footer.html"></include>
+
+    <script type="module" src="./favorite-cocktails.js"></script>
+    <div class="overlay" data-overlay></div>
+    <div class="overlay" data-overlay-ingredient></div>
+
+    <include src="./partials/main/modal/modal-cocktails.html"></include>
+    <include src="./partials/main/modal/modal-ingredients.html"></include>
+  </body>
+</html>
