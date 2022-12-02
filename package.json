@@ -1,21 +1,21 @@
 {
-  "name": "team_project_js_anonymous",
+  "name": "cocktails",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://yuliiakulish.github.io/Team_project_JS_Anonymous",
+  "homepage": "https://yuliiakulish.github.io/Cocktails",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Team_project_JS_Anonymous/"
+    "build": "parcel build src/*.html --public-url /Cocktails/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yuliiakulish/Team_project_JS_Anonymous"
+    "url": "git+https://github.com/yuliiakulish/Cocktails"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yuliiakulish/Team_project_JS_Anonymous/issues"
+    "url": "https://github.com/yuliiakulish/Cocktails/issues"
   },
   "dependencies": {
     "axios": "^1.1.2",
