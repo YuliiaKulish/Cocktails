@@ -2,20 +2,20 @@
   "name": "team_project_js_anonymous",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://ArturMand.github.io/Team_project_JS_Anonymous",
+  "homepage": "https://yuliiakulish.github.io/Team_project_JS_Anonymous",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /Team_project_JS_Anonymous/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArturMand/Team_project_JS_Anonymous"
+    "url": "git+https://github.com/yuliiakulish/Team_project_JS_Anonymous"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ArturMand/Team_project_JS_Anonymous/issues"
+    "url": "https://github.com/yuliiakulish/Team_project_JS_Anonymous/issues"
   },
   "dependencies": {
     "axios": "^1.1.2",
