@@ -1,0 +1,427 @@
+@use '../utils/vars' as *;
+
+// Header
+.header {
+  padding: 30px 0 20px;
+  @media screen and (min-width: $tablet) {
+    padding: 40px 0 30px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+// Logo
+.logo {
+  position: relative;
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    margin-right: 175px;
+    z-index: 2;
+  }
+
+  &__text {
+    font-size: 22px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 28px;
+      line-height: 0.86;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 13px;
+    right: 11.5px;
+    z-index: -1;
+    width: 30px;
+
+    @media screen and (min-width: $tablet) {
+      width: 38px;
+      right: 15px;
+    }
+  }
+}
+
+// Navigation
+.nav {
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    text-align: center;
+  }
+
+  &__list {
+    @media screen and (min-width: $desktop) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    font-size: 28px;
+    line-height: 0.86;
+    letter-spacing: 0.02em;
+    color: $black;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 18px;
+      line-height: 1.3;
+
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 16px 0;
+
+    @media screen and (min-width: $tablet) {
+      padding: 20px 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 8px 0;
+    }
+  }
+}
+
+// Favorite
+.favorite {
+  position: relative;
+
+  @media screen and (min-width: $desktop) {
+    &:hover .favorite__list,
+    &:focus-within .favorite__list {
+      opacity: 1;
+      transform: scaleY(1);
+      visibility: visible;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    margin-left: 8px;
+    z-index: -1;
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    display: block;
+  }
+
+  &__list {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    visibility: hidden;
+    transition: transform 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      text-align: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+      position: absolute;
+      width: 210px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 16px;
+
+    @media screen and (min-width: $tablet) {
+      padding: 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 11px;
+      border: 1px solid $grapefruit;
+      border-radius: 4px;
+
+      &:hover,
+      &:focus {
+        color: $white;
+        background-color: $grapefruit;
+      }
+    }
+  }
+
+  &__input {
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+
+    &:checked ~ .favorite__list {
+      opacity: 1;
+      transform: scaleY(1);
+      visibility: visible;
+    }
+  }
+}
+
+// Search
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transform: translateY(0);
+  transition: transform $animation;
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin: 0 152px 0 172px;
+  }
+
+  &__img,
+  &__icon,
+  &__line {
+    position: absolute;
+  }
+
+  &__img {
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__line {
+    border: 1px solid $grapefruit;
+    width: 40px;
+    transform: rotate(-90deg);
+    left: 20px;
+  }
+
+  &__input {
+    border: 1px solid $grapefruit;
+    border-radius: 4px;
+    width: 280px;
+    height: 40px;
+    padding-left: 48px;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+
+    @media screen and (min-width: $tablet) {
+      width: 288px;
+    }
+
+    &::placeholder {
+      color: $gray;
+      opacity: 0.4;
+    }
+  }
+}
+
+// Burger Menu
+.menu__burger {
+  &-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+
+    &.is-open .menu__burger-line {
+      width: 0;
+
+      &::after {
+        transform: rotate(45deg);
+        top: 0;
+        left: -15px;
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+        bottom: 0;
+        left: -15px;
+      }
+    }
+  }
+
+  &-line {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: $black;
+    border-radius: 1px;
+    transition: width $animation;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: $black;
+      border-radius: 1px;
+      transition: transform $animation;
+      left: 0;
+    }
+
+    &::after {
+      top: 8px;
+    }
+    &::before {
+      bottom: 8px;
+    }
+  }
+}
+
+// Modal Menu
+.modal__menu {
+  @media screen and (max-width: $tablet) {
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    transform: translateY(-101%);
+    transition: transform $animation;
+    padding: 28px 20px;
+
+    &.is-open {
+      transform: translateY(0);
+      width: 100vw;
+      height: 100vh;
+      background-color: $white;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    .nav,
+    .theme {
+      display: none;
+    }
+    .search {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+// Theme Switch
+.theme {
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    margin-bottom: 54px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
+
+  &-switch {
+    position: relative;
+    border: 1px solid $grapefruit;
+    border-radius: 20px;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    transition: $animation;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-color: $grapefruit;
+      border-radius: 50%;
+      top: 1.6px;
+      left: 1.6px;
+      transition: $animation;
+    }
+  }
+
+  &-toggle {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+
+    &:checked {
+      & + label {
+        background-color: $grapefruit;
+        border: 1px solid $white;
+
+        &::after {
+          background-color: $white;
+          left: 37px;
+          transform: translateX(-100%);
+        }
+      }
+    }
+  }
+
+  &-text {
+    font-size: 18px;
+
+    &--light {
+      margin-right: 12px;
+    }
+    &--dark {
+      margin-left: 12px;
+    }
+
+    &.active {
+      color: $dark;
+    }
+  }
+}
+
+// Tablet Menu
+.tablet__menu {
+  display: none;
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    position: absolute;
+    display: block;
+    transform: translateY(-101%);
+    transition: transform $animation;
+    padding: 40px 32px;
+
+    &.is-open {
+      transform: translateY(0);
+      width: 100vw;
+      height: 100vh;
+      background-color: $white;
+      top: 0;
+      left: 0;
+
+      & + .search {
+        transform: translateY(-201%);
+      }
+    }
+  }
+}
