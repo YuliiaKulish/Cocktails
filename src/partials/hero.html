@@ -1,0 +1,54 @@
+<section class="section hero">
+  <div class="container hero__container">
+    <div class="hero__top-content">
+      <h1 class="hero__title">A party without cocktails is not like a party</h1>
+      <picture>
+        <source
+          srcset="
+            ./images/mobile/hero.png    1x,
+            ./images/mobile/hero@2x.png 2x,
+            ./images/mobile/hero@3x.png 3x
+          "
+          media="(max-width: 767px)"
+        />
+        <source
+          srcset="
+            ./images/tablet/hero.png    1x,
+            ./images/tablet/hero@2x.png 2x,
+            ./images/tablet/hero@3x.png 3x
+          "
+          media="(min-width: 768px) and (max-width: 1279px)"
+        />
+        <source
+          srcset="
+            ./images/desktop/hero.png    1x,
+            ./images/desktop/hero@2x.png 2x,
+            ./images/desktop/hero@3x.png 3x
+          "
+          media="(min-width: 1280px)"
+        />
+        <img class="hero__img" src="./images/desktop/hero.png" alt="Cocktail" />
+      </picture>
+    </div>
+    <div class="hero__search">
+      <p class="hero__subtitle">Search your favorite cocktail by ABC</p>
+      <div
+        class="hero__select"
+        role="button"
+        tabindex="0"
+        aria-haspopup="listbox"
+        aria-controls="letter-list"
+      >
+        <span class="hero__select-letter">A</span>
+        <svg class="hero__icon" width="16" height="16">
+          <use href="./images/symbol-defs.svg#icon-arrow"></use>
+        </svg>
+      </div>
+      <ul
+        class="hero__navigation is-hidden"
+        role="listbox"
+        id="letter-list"
+      ></ul>
+    </div>
+  </div>
+</section>

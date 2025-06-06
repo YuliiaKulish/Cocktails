@@ -1,3 +1,11 @@
+@use './utils/vars' as *;
 @use './utils/common';
 @use './utils/reset';
-@use './components/header'
+@use './components/header';
+@use './components/hero';
+@use './components/gallery';
+
+.footer {
+    height: 110px;
+    background: $grapefruit;
+}

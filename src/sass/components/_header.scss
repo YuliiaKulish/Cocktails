@@ -295,21 +295,20 @@
 // Modal Menu
 .modal__menu {
   @media screen and (max-width: $tablet) {
-    position: absolute;
+    position: fixed;
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
+    flex-direction: column;
     transform: translateY(-101%);
     transition: transform $animation;
     padding: 28px 20px;
-
+    overflow-y: auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: $white;
+    top: 0;
+    left: 0;
     &.is-open {
       transform: translateY(0);
-      width: 100vw;
-      height: 100vh;
-      background-color: $white;
-      top: 0;
-      left: 0;
     }
   }
 
@@ -325,6 +324,7 @@
 
   @media screen and (min-width: $desktop) {
     display: flex;
+    flex-direction: row-reverse;
   }
 }
 
@@ -410,14 +410,15 @@
     transform: translateY(-101%);
     transition: transform $animation;
     padding: 40px 32px;
-
+    width: 100vw;
+    height: 100vh;
+    background-color: $white;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
     &.is-open {
       transform: translateY(0);
-      width: 100vw;
-      height: 100vh;
-      background-color: $white;
-      top: 0;
-      left: 0;
+      z-index: 1;
 
       & + .search {
         transform: translateY(-201%);
