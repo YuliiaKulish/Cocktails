@@ -1,4 +1,4 @@
-async function cocktailByLetter(event) {
+export async function cocktailByLetter(event) {
    if (event.target.nodeName !== "BUTTON") {
     return;
   }
