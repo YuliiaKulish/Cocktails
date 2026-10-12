@@ -1,0 +1,67 @@
+@use "../utils/vars" as *;
+
+.header {
+  padding: 0 20px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10000;
+
+    &.is-open {
+      .header__burger-line {
+        background-color: transparent;
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__burger-line {
+    background-color: black;
+    border-radius: 1px;
+    width: 30px;
+    height: 2px;
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      background-color: black;
+      border-radius: 1px;
+      width: 30px;
+      height: 2px;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: absolute;
+      left: 0;
+    }
+
+    &::after {
+      transform: translateY(-7px);
+    }
+
+    &::before {
+      transform: translateY(7px);
+    }
+  }
+}

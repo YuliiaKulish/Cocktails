@@ -1,0 +1,96 @@
+@use "../utils/vars" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.base-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $auxiliary-orange;
+  border-radius: 4px;
+  border: none;
+  box-shadow: $shadow;
+  height: 48px;
+  cursor: pointer;
+
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 20px;
+
+  // line-height: 24px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    color: $grapefruit;
+    background: #f5f5f5;
+  }
+
+  &:active {
+    background: $grapefruit;
+    color: #fff;
+  }
+}
+
+.secondary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  cursor: pointer;
+  border: 2px solid $grapefruit;
+  border-radius: 4px;
+  height: 48px;
+
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 20px;
+
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: $grapefruit;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $grapefruit;
+    background: #f5f5f5;
+  }
+
+  &:active {
+    border: 1px solid $grapefruit;
+  }
+}

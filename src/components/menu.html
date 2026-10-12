@@ -1,0 +1,69 @@
+<div class="menu" id="menu">
+  <label for="menu-toggle" class="menu__toggle-label">
+    <span class="menu__toggle-icon">Light</span>
+    <input type="checkbox" id="menu-toggle" class="menu__toggle" />
+    <span class="menu__toggle-icon">Dark</span>
+  </label>
+
+  <label for="menu-search" class="menu__search-label">
+    <span class="menu__search-icon">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 2.5C14.1349 2.5 17.5 5.86514 17.5 10L17.4932 10.3115C17.4278 11.8647 16.8781 13.3614 15.917 14.5898L15.6445 14.9385L15.957 15.252L19.999 19.2939L19.293 20L15.251 15.958L14.9375 15.6455L14.5889 15.918C13.2786 16.9426 11.6633 17.4996 10 17.5C5.86514 17.5 2.5 14.1349 2.5 10C2.5 5.86514 5.86514 2.5 10 2.5ZM10 3.5C6.41486 3.5 3.5 6.41486 3.5 10C3.5 13.5851 6.41486 16.5 10 16.5C13.5851 16.5 16.5 13.5851 16.5 10C16.5 6.41486 13.5851 3.5 10 3.5Z"
+          fill="#FD5103"
+          stroke="#FD5103"
+        />
+      </svg>
+    </span>
+    <input
+      type="text"
+      id="menu-search"
+      class="menu__search"
+      placeholder="Search..."
+    />
+  </label>
+
+  <ul class="menu__list">
+    <li class="menu__item">
+      <a href="/" class="menu__link">Home</a>
+    </li>
+    <li class="menu__item">
+      <a href="/favorite" class="menu__link">
+        Favorite
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.5429 15.9299L20.5079 7.57045C20.6409 7.43097 20.7151 7.24566 20.7151 7.05295C20.7151 6.86024 20.6409 6.67493 20.5079 6.53545L20.4989 6.52645C20.4345 6.4586 20.3569 6.40457 20.2709 6.36765C20.1849 6.33073 20.0923 6.31169 19.9987 6.31169C19.9051 6.31169 19.8125 6.33073 19.7265 6.36765C19.6405 6.40457 19.5629 6.4586 19.4984 6.52645L11.9984 14.3984L4.50145 6.52645C4.43699 6.45859 4.3594 6.40457 4.2734 6.36764C4.1874 6.33072 4.09479 6.31169 4.0012 6.31169C3.90761 6.31169 3.815 6.33072 3.729 6.36764C3.643 6.40457 3.56541 6.45859 3.50095 6.52645L3.49195 6.53545C3.35898 6.67493 3.2848 6.86024 3.2848 7.05295C3.2848 7.24565 3.35898 7.43097 3.49195 7.57045L11.4569 15.9299C11.527 16.0035 11.6112 16.062 11.7046 16.102C11.7979 16.142 11.8984 16.1626 11.9999 16.1626C12.1015 16.1626 12.202 16.142 12.2953 16.102C12.3887 16.062 12.4729 16.0035 12.5429 15.9299Z"
+            fill="black"
+          />
+        </svg>
+      </a>
+
+      <div class="menu__dropdown">
+        <ul class="menu__dropdown-list">
+          <li class="menu__dropdown-item">
+            <a href="/favorite/cocktails" class="menu__dropdown-link"
+              >Favorite cocktails</a
+            >
+          </li>
+          <li class="menu__dropdown-item">
+            <a href="/favorite/ingredients" class="menu__dropdown-link"
+              >Favorite ingredients</a
+            >
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
